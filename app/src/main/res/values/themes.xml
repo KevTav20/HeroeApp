@@ -6,4 +6,29 @@
     </style>
 
     <style name="Theme.HeroeApp" parent="Base.Theme.HeroeApp" />
+
+    <!-- Estilo para Títulos con Bangers -->
+    <style name="font1">
+        <item name="fontFamily">@font/bangers_regular</item>
+    </style>
+
+    <!-- Estilo para Subtítulos con Comic Neue Bold -->
+    <style name="font2">
+        <item name="fontFamily">@font/comic_neue_bold</item>
+    </style>
+
+    <!-- Estilo para Descripciones con Staatliches -->
+    <style name="font3">
+        <item name="fontFamily">@font/staatliches_regular</item>
+    </style>
+
+    <!-- Estilo para Impact con Impacted -->
+    <style name="font4">
+        <item name="fontFamily">@font/impacted</item>
+    </style>
+
+    <!-- Estilo para Texto general con Anton -->
+    <style name="font5">
+        <item name="fontFamily">@font/anton_regular</item>
+    </style>
 </resources>
