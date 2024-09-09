@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="marvel_red">#E60202</color>
+    <color name="dc_blue">#0A75C2</color>
+    <color name="combined_red_blue">#763A7B</color>
 </resources>
