@@ -5,4 +5,7 @@
     <color name="marvel_red">#E60202</color>
     <color name="dc_blue">#0A75C2</color>
     <color name="combined_red_blue">#763A7B</color>
+    <color name="gray">#4A4A4A</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="bronze">#CD7F32</color>
 </resources>

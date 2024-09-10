@@ -1,10 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".activities.HomeActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="vertical"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.90"
+        android:orientation="vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        />
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:foregroundGravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/baseline_account_box_24" />
+
+        <TextView
+            android:id="@+id/usernameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:text="@string/welcome_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/logoutBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/baseline_logout_24"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/selection_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_vertical"
+        android:text=" Elige tu bando "
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintVertical_bias="0.25"
+        style="@style/font1"
+        android:textColor="@color/gray"
+        />
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/selection_team"
+        app:layout_constraintVertical_bias="0.243"
+        android:backgroundTint="@color/silver"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:id="@+id/marvel_logos_characters"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/selection_team"
+        app:layout_constraintVertical_bias="0.245"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:src="@drawable/logo_america"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_spider"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_hulk"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_black"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_wolverine"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dc_section"
+        android:layout_width="280dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/marvel_logos_characters"
+        app:layout_constraintVertical_bias="0.246"
+        android:backgroundTint="@color/bronze"
+        />
+    <LinearLayout
+        android:id="@+id/dc_logos_characters"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV2"
+        app:layout_constraintTop_toBottomOf="@id/marvel_logos_characters"
+        app:layout_constraintVertical_bias="0.245"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_flash"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_batman"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_wonder"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_superman"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_green"
+            />
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

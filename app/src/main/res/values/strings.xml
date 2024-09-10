@@ -3,4 +3,5 @@
     <string name="email">Correo electronico</string>
     <string name="password">Contraseña</string>
     <string name="login">Iniciar Sesion</string>
+    <string name="welcome_text">Bienvenido, Kevin</string>
 </resources>
