@@ -6,8 +6,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".activities.HomeActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".activities.PublisherActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideV2"
@@ -89,6 +89,7 @@
         android:textColor="@color/gray"
         />
     <Button
+        android:id="@+id/marvel_section"
         android:layout_width="280dp"
         android:layout_height="57dp"
         app:layout_constraintBottom_toBottomOf="parent"

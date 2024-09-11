@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_main"
-        android:alpha="0.75"
+        android:alpha="0.2"
         />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideV1"
@@ -99,6 +99,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:textSize="24sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         style="@style/font1"
         app:layout_constraintBottom_toBottomOf="parent"

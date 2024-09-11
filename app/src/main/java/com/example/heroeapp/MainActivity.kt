@@ -7,9 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.heroeapp.activities.HomeActivity
+import com.example.heroeapp.activities.PublisherActivity
 import com.example.heroeapp.models.User
 import com.google.android.material.snackbar.Snackbar
 
@@ -21,11 +19,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val sharedPreferences = getSharedPreferences("myPreferences", MODE_PRIVATE)
+
+        val sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
         val isLogged = sharedPreferences.getBoolean("isLogged", false)
 
         if (isLogged){
-            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            val intent = Intent(this@MainActivity, PublisherActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -45,16 +44,25 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(v, "El correo o la contraseña estan incorrectos", Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             val isValidUser = User.users.any {
                 user -> user.email == email && user.password == password
             }
 
+            if(!isValidUser){
+                Log.i("LOGIN_ERROR", "Inicio correcto")
+                Snackbar.make(v,"El correo o la contraseña son icorrectas", Snackbar.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             Log.i("VALID_USER", isValidUser.toString())
             Log.i("LOGIN_SUCCESFUL", "Inicio de sesion correcto")
+
+
             val editor = sharedPreferences.edit()
             editor.putBoolean("isLogged", true)
             editor.apply()
-            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            val intent = Intent(this@MainActivity, PublisherActivity::class.java)
             startActivity(intent)
             finish()
         }
