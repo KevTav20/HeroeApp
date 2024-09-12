@@ -18,9 +18,6 @@
             android:name=".activities.HeroesActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.prueba_division_pantalla"
-            android:exported="false" />
-        <activity
             android:name=".activities.PublisherActivity"
             android:exported="false" />
         <activity
