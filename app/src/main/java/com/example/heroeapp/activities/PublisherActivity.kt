@@ -37,7 +37,7 @@ class PublisherActivity : AppCompatActivity() {
         // Acción para el botón de logout
         logoutBtn.setOnClickListener {
             Log.i("LOGOUT", "Cerrando sesión")
-            val sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
+
             val editor = sharedPreferences.edit()
             editor.remove("isLogged")
             editor.apply()

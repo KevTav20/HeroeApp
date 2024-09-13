@@ -1,5 +1,6 @@
 package com.example.heroeapp.adapters
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.heroeapp.R
+import com.example.heroeapp.activities.HeroesActivity
 import com.example.heroeapp.models.TeamButton
 import com.squareup.picasso.Picasso
 
@@ -36,8 +38,14 @@ class TeamAdapter(val teamButtonList: List<TeamButton>) : RecyclerView.Adapter<T
         Picasso.get().load(team.images[4]).into(holder.logo5IV)
 
         holder.teamBtn.setOnClickListener {
-
             Log.i("PUSH_BUTTON","Botón del TeamButton con id: ${team.id} clickeado")
+            val context = holder.itemView.context
+            val intent = Intent(context, HeroesActivity::class.java)
+
+            intent.putExtra("TEAM_ID", team.id)
+            intent.putExtra("TEAM_COLOR", team.color)
+
+            context.startActivity(intent)
         }
     }
 
