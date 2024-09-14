@@ -7,4 +7,5 @@
     <string name="welcome_team_text">Bienvenido a, marvel</string>
     <string name="characters">Personajes</string>
     <string name="heroe_name">Batgirl</string>
+    <string name="description">Descripcion del personaje</string>
 </resources>

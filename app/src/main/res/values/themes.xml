@@ -44,6 +44,11 @@
     <style name="font8">
         <item name="fontFamily">@font/kg_happy_solid</item>
     </style>
-
+    <style name="font9">
+        <item name="fontFamily">@font/poppins_light</item>
+    </style>
+    <style name="font10">
+        <item name="fontFamily">@font/barber_font</item>
+    </style>
 
 </resources>

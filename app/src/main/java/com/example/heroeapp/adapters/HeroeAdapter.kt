@@ -7,10 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroeapp.R
-import com.example.heroeapp.models.Character
+import com.example.heroeapp.models.Heroes
 import com.squareup.picasso.Picasso
 
-class CharacterAdapter(val characterList : List<Character>) : RecyclerView.Adapter<CharacterViewHolder>(){
+class CharacterAdapter(val characterList : List<Heroes>) : RecyclerView.Adapter<CharacterViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.character_item, parent, false)
         return CharacterViewHolder(view)
