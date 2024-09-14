@@ -4,4 +4,7 @@
     <string name="password">Contraseña</string>
     <string name="login">Iniciar Sesion</string>
     <string name="welcome_text">Bienvenido, Kevin</string>
+    <string name="welcome_team_text">Bienvenido a, marvel</string>
+    <string name="characters">Personajes</string>
+    <string name="heroe_name">Batgirl</string>
 </resources>

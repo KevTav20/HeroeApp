@@ -8,3 +8,6 @@ data class Comic(
     val price: Double,
     val image : String
 )
+
+
+

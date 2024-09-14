@@ -1,7 +1,7 @@
 package com.example.heroeapp.models
 
 data class TeamButton(val id: Int, val name: String, val color: String, val images: List<String>) {
-    val computedName : String get() = "Bienvenido a $name"
+    val computedName :String get() = "Bienvenido a $name"
     companion object {
         val teamButtons = listOf(
             TeamButton(

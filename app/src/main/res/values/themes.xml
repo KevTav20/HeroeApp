@@ -31,4 +31,19 @@
     <style name="font5">
         <item name="fontFamily">@font/anton_regular</item>
     </style>
+    <style name="CustomCircularImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="font6">
+        <item name="fontFamily">@font/kg_happy</item>
+    </style>
+    <style name="font7">
+        <item name="fontFamily">@font/kg_happy_shadows</item>
+    </style>
+    <style name="font8">
+        <item name="fontFamily">@font/kg_happy_solid</item>
+    </style>
+
+
 </resources>

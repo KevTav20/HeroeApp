@@ -23,57 +23,97 @@
         app:layout_constraintGuide_percent="0.9"
         android:orientation="vertical"
         />
+
+
     <View
         android:id="@+id/dinamic_backgound"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/dc_background"
         android:alpha="0.7"
-        />
-
+        android:background="@drawable/marvel_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/welcome_teamTV"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Bienvenido a, marvel"
-        android:textSize="34sp"
+        android:id="@+id/dinamic_welcome"
         style="@style/font5"
-        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/welcome_team_text"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideV6"
         app:layout_constraintEnd_toStartOf="@id/guideV7"
-        app:layout_constraintVertical_bias="0.05"
-        />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideV6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
+    <TextView
+        android:id="@+id/charactersTV"
+        style="@style/font1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Personajes"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV6"
+        app:layout_constraintTop_toBottomOf="@id/dinamic_welcome"
+        app:layout_constraintVertical_bias="0.04" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/characters_recycleview"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/titulo_heroesTV"
-        app:layout_constraintEnd_toStartOf="@id/guideV7"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@id/guideV6"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_teamTV" />
-
-    <TextView
-        android:id="@+id/titulo_heroesTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/characters_recycleview"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideV6"
         app:layout_constraintEnd_toStartOf="@id/guideV7"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/guideV6"
+        app:layout_constraintTop_toBottomOf="@id/charactersTV"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/productsTV"
+        style="@style/font1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Merchandising"
-        android:textSize="44sp"
+        android:text="Productos"
         android:textColor="@color/white"
-        style="@style/font3"
-        />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideV6"
+        app:layout_constraintTop_toBottomOf="@id/characters_recycleview"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comics_recycleview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV7"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/guideV6"
+        app:layout_constraintTop_toBottomOf="@id/productsTV"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/figures_recycleview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV7"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/guideV6"
+        app:layout_constraintTop_toBottomOf="@id/comics_recycleview"
+        app:layout_constraintVertical_bias="0.1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

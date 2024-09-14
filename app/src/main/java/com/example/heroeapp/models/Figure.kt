@@ -1,6 +1,6 @@
 package com.example.heroeapp.models
 
-data class FunkoPop(
+data class Figure(
     val id: Int,
     val name: String,
     val description: String,
