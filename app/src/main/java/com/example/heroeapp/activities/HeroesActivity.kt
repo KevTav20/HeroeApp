@@ -1,6 +1,8 @@
 package com.example.heroeapp.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -10,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroeapp.R
 import com.example.heroeapp.adapters.CharacterAdapter
-import com.example.heroeapp.models.Heroes
+import com.example.heroeapp.adapters.HeroeAdapter
+import com.example.heroeapp.models.Character
+import com.example.heroeapp.models.Heroe
 import com.example.heroeapp.models.TeamButton
 
 class HeroesActivity : AppCompatActivity() {
@@ -42,17 +46,20 @@ class HeroesActivity : AppCompatActivity() {
             dinamic_backgroundV.setBackgroundResource(R.drawable.dc_background)
         }
 
-        characterRecycleView = findViewById(R.id.characters_recycleview)
-
         val filteredCharacters = when (teamId) {
-            1 -> Heroes.characters.subList(0, 10) // Mostrar personajes del 1 al 10
-            2 -> Heroes.characters.subList(10, 20) // Mostrar personajes del 11 al 20
+            1 -> Heroe.heroes.subList(0, 10) // Mostrar personajes del 1 al 10
+            2 -> Heroe.heroes.subList(10, 20) // Mostrar personajes del 11 al 20
             else -> emptyList() // Si no es ninguno, no mostrar personajes
         }
 
-        // Configurar el RecyclerView con la lista filtrada
-        characterRecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        characterRecycleView.adapter = CharacterAdapter(filteredCharacters)
+        characterRecycleView = findViewById(R.id.characters_recycleview)
 
+        characterRecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        characterRecycleView.adapter = HeroeAdapter(filteredCharacters) { heroe: Heroe ->
+            Log.i("HeroesActivity", "Se seleccionó el héroe: ${heroe.name}")
+            val intent = Intent(this@HeroesActivity, CharacterDetailActivity::class.java)
+            intent.putExtra("characterId", heroe.id) // Enviar el ID del héroe seleccionado
+            startActivity(intent)
+        }
     }
 }

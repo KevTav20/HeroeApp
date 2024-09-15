@@ -5,12 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".activities.CharacterDetailActivity">
 
     <View
+        android:id="@+id/character_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#660000"
+        android:alpha="0.3"
         />
 
     <androidx.constraintlayout.widget.Guideline
@@ -32,9 +35,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_begin="375dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <TextView
+        android:id="@+id/heroe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideH2"
+        android:text="Capitana Marvel"
+        android:textColor="@color/light_gray"
+        style="@style/font6"
+        android:textSize="25sp"/>
+
+
 
     <ImageView
+        android:id="@+id/heroe_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/spiderman_detail"
@@ -42,15 +68,15 @@
         app:layout_constraintEnd_toStartOf="@id/guideV9"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toEndOf="@id/guideV8"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideH2"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/descriptionTitle"
+        android:id="@+id/description_title"
         style="@style/font1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quien es?"
+        android:text="Quien es?  "
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,33 +87,34 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/descriptionTV"
+        android:id="@+id/description"
         style="@style/font9"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/description"
+        android:text="Peter Parker es un adolescente que, tras ser mordido por una araña radiactiva, adquiere habilidades como superfuerza, agilidad mejorada, la capacidad de trepar paredes y un sentido arácnido que le advierte del peligro. Bajo la identidad de Spider-Man, lucha contra el crimen mientras enfrenta los desafíos de ser un joven adulto en Nueva York."
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideV9"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideV8"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTitle"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/description_title"
+        app:layout_constraintVertical_bias="0.1"
+        />
 
     <TextView
-        android:id="@+id/popularityTV"
+        android:id="@+id/popularity"
         style="@style/font10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Popularidad"
+        android:text="@string/popularity"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideV9"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toEndOf="@id/guideV8"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTV"
+        app:layout_constraintTop_toBottomOf="@+id/description"
         app:layout_constraintVertical_bias="0.2" />
 
 

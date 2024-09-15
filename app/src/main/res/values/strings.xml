@@ -8,4 +8,5 @@
     <string name="characters">Personajes</string>
     <string name="heroe_name">Batgirl</string>
     <string name="description">Descripcion del personaje</string>
+    <string name="popularity">Popularidad</string>
 </resources>

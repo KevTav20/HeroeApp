@@ -31,6 +31,7 @@ class PublisherActivity : AppCompatActivity() {
         teamRecyclerView.adapter = TeamAdapter(TeamButton.teamButtons)
         teamRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         // Configurar el usuario
+
         val user = User.users[0]
         usernameTV.text = user.computedName
 
