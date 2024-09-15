@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Productos"
+        android:text="Alianzas"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,27 +93,14 @@
         app:layout_constraintTop_toBottomOf="@id/characters_recycleview"
         app:layout_constraintVertical_bias="0.1" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/comics_recycleview"
+    <ImageView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/super_heroes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideV7"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/guideV6"
-        app:layout_constraintTop_toBottomOf="@id/productsTV"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/figures_recycleview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideV7"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/guideV6"
-        app:layout_constraintTop_toBottomOf="@id/comics_recycleview"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintStart_toEndOf="@id/guideV6"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
